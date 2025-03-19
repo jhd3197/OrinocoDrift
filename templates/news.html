@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Automotive News - Advanced Car Website{% endblock %}
+
+{% block content %}
+<div class="news-container">
+    <h1>Automotive News</h1>
+    
+    <div class="news-categories">
+        <button class="category-filter active" data-category="all">All</button>
+        <button class="category-filter" data-category="Performance">Performance</button>
+        <button class="category-filter" data-category="Future Tech">Future Tech</button>
+        <button class="category-filter" data-category="Industry News">Industry News</button>
+    </div>
+
+    <div class="news-grid">
+        {% for article in news_articles %}
+        <article class="news-card" data-category="{{ article.category|default('Uncategorized') }}">
+            {% if article.image_url %}
+            <div class="news-image">
+                <img src="{{ article.image_url }}" alt="{{ article.title }}">
+            </div>
+            {% endif %}
+            <div class="news-content">
+                <div class="news-meta">
+                    {% if article.category %}
+                    <span class="category-tag">{{ article.category }}</span>
+                    {% endif %}
+                    <span class="date">{{ article.date }}</span>
+                </div>
+                <h2>{{ article.title }}</h2>
+                <p>{{ article.content[:150] }}{% if article.content|length > 150 %}...{% endif %}</p>
+                {% if article.author %}
+                <div class="author">By {{ article.author }}</div>
+                {% endif %}
+                <a href="{{ url_for('news_details', news_id=article.id) }}" class="read-more">Read More</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryButtons = document.querySelectorAll('.category-filter');
+    const newsCards = document.querySelectorAll('.news-card');
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.dataset.category;
+            
+            // Update active button
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Filter news cards
+            newsCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+{% endblock %}

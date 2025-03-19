@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ car.name }} Details - Advanced Car Website{% endblock %}
+
+{% block content %}
+<div class="car-details-container">
+    <div class="car-header">
+        <h1>{{ car.name }} ({{ car.year }})</h1>
+        <div class="price">{{ car.price }}</div>
+    </div>
+
+    <div class="car-grid">
+        <div class="car-image">
+            <img src="{{ car.image_url }}" alt="{{ car.name }}" class="main-image">
+        </div>
+
+        <div class="car-info">
+            <div class="description">
+                <h2>Description</h2>
+                <p>{{ car.description }}</p>
+            </div>
+
+            <div class="specifications">
+                <h2>Specifications</h2>
+                <ul>
+                    {% for key, value in car.specifications.items() %}
+                    <li><strong>{{ key|title }}:</strong> {{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="features">
+                <h2>Key Features</h2>
+                <ul>
+                    {% for feature in car.features %}
+                    <li>{{ feature }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="colors">
+                <h2>Available Colors</h2>
+                <div class="color-swatches">
+                    {% for color in car.colors %}
+                    <div class="color-swatch">{{ color }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="{{ url_for('car_search') }}">Back to Car Search</a>
+{% endblock %}

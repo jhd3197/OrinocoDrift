@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}OrinocoDrift - Exotic & Performance Cars{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section mb-5 position-relative">
+    <div class="p-5 text-center bg-image rounded-3" style="
+        background-image: url('{{ featured_cars[0].image_url }}');
+        height: 500px; background-size: cover; background-position: center;
+    ">
+        <div class="mask h-100 w-100" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                    <h1 class="mb-3">Welcome to OrinocoDrift</h1>
+                    <h4 class="mb-4">Venezuela's Premier Exotic Car Experience</h4>
+                    <p class="mb-4">Discover the finest collection of high-performance and luxury vehicles in South America. 
+                    From rare imports to exclusive models, we bring the world's most exceptional cars to the heart of Venezuela.</p>
+                    <a class="btn btn-outline-light btn-lg" href="/cars" role="button">Explore Our Collection</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Featured Cars Section -->
+<section class="featured-cars mb-5">
+    <h2 class="text-center mb-4">Featured Vehicles</h2>
+    <div class="row">
+        {% for car in featured_cars %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ car.image_url }}" class="card-img-top" alt="{{ car.name }}" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ car.name }}</h5>
+                    <p class="card-text text-muted">{{ car.year }} | {{ car.price }}</p>
+                    <p class="card-text">{{ car.description[:100] }}...</p>
+                    <a href="/cars/{{ car.id }}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Latest News Section -->
+<section class="latest-news">
+    <h2 class="text-center mb-4">Latest Automotive News</h2>
+    <div class="row">
+        {% for article in latest_news %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ article.image_url }}" class="card-img-top" alt="{{ article.title }}" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <div class="mb-2">
+                        <span class="badge bg-secondary">{{ article.category }}</span>
+                        <small class="text-muted">{{ article.date }}</small>
+                    </div>
+                    <h5 class="card-title">{{ article.title }}</h5>
+                    <p class="card-text">{{ article.content[:100] }}...</p>
+                    <a href="/news/{{ article.id }}" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

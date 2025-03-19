@@ -1,0 +1,200 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "title": "New Tesla Model S Release",
+            "content": "Tesla has unveiled its latest Model S with improved battery performance and range.",
+            "date": "2025-03-18",
+            "image_url": "/static/images/7.webp"
+        },
+        {
+            "id": 2,
+            "title": "Ford Updates Mustang Lineup",
+            "content": "Ford is revamping its Mustang lineup with new tech features and safety improvements.",
+            "date": "2025-03-17",
+            "image_url": "/static/images/8.webp"
+        },
+        {
+            "id": 3,
+            "title": "BMW M3 Sets New Track Record",
+            "content": "The new BMW M3 Competition has set a remarkable lap time at the Nürburgring, showcasing its exceptional performance capabilities.",
+            "date": "2025-03-16",
+            "image_url": "/static/images/9.webp",
+            "category": "Performance",
+            "author": "Michael Wagner"
+        },
+        {
+            "id": 4,
+            "title": "Porsche Announces Electric 911",
+            "content": "In a groundbreaking announcement, Porsche reveals plans for an all-electric version of the iconic 911, scheduled for 2026.",
+            "date": "2025-03-15",
+            "image_url": "/static/images/10.webp",
+            "category": "Future Tech",
+            "author": "Sarah Chen"
+        },
+        {
+            "id": 5,
+            "title": "Audi RS Models Go Hybrid",
+            "content": "Audi Sport announces that all future RS models will feature hybrid powertrains, starting with the next-generation RS7.",
+            "date": "2025-03-14",
+            "image_url": "/static/images/1.webp",
+            "category": "Industry News",
+            "author": "James Miller"
+        },
+        {
+            "id": 8,
+            "title": "Nissan GT-R Unleashed in Tokyo",
+            "content": "Nissan unveils a limited edition GT-R at the Tokyo Auto Show, featuring exclusive design elements and performance upgrades.",
+            "date": "2025-03-11",
+            "image_url": "/static/images/2.webp",
+            "category": "Auto Shows",
+            "author": "Kenji Yamamoto"
+        },
+        {
+            "id": 9,
+            "title": "Jaguar F-Type Celebrates Anniversary",
+            "content": "Jaguar commemorates the 10th anniversary of the F-Type with special edition models and enhanced performance features.",
+            "date": "2025-03-10",
+            "image_url": "/static/images/3.webp",
+            "category": "Special Editions",
+            "author": "Emily Watson"
+        },
+        {
+            "id": 10,
+            "title": "Dodge Challenger Hellcat Breaks Records",
+            "content": "The Dodge Challenger SRT Hellcat sets a new benchmark for American muscle cars in speed and performance tests.",
+            "date": "2025-03-09",
+            "image_url": "/static/images/4.webp",
+            "category": "Performance",
+            "author": "Mike Thompson"
+        },
+        {
+            "id": 11,
+            "title": "Subaru WRX STI Wins Rally Championship",
+            "content": "The Subaru WRX STI secures the championship title at the annual rally event, showcasing its rugged performance on challenging terrains.",
+            "date": "2025-03-08",
+            "image_url": "/static/images/5.webp",
+            "category": "Motorsports",
+            "author": "Laura Davis"
+        },
+        {
+            "id": 12,
+            "title": "Volvo XC90 Receives Top Safety Award",
+            "content": "Volvo’s XC90 is honored with a top safety award for its innovative safety features and forward-thinking design.",
+            "date": "2025-03-07",
+            "image_url": "/static/images/6.webp",
+            "category": "Awards",
+            "author": "Sven Andersson"
+        },
+        {
+            "id": 13,
+            "title": "Honda Civic Type R Outperforms Rivals",
+            "content": "Recent performance tests reveal that the Honda Civic Type R outclasses its competitors with superior handling and speed.",
+            "date": "2025-03-06",
+            "image_url": "/static/images/7.webp",
+            "category": "Performance",
+            "author": "David Lee"
+        },
+        {
+            "id": 14,
+            "title": "Toyota Supra Returns to Racing",
+            "content": "Toyota announces its return to competitive racing with the latest Supra model designed to dominate the track.",
+            "date": "2025-03-05",
+            "image_url": "/static/images/8.webp",
+            "category": "Racing",
+            "author": "Akira Tanaka"
+        },
+        {
+            "id": 15,
+            "title": "Maserati GranTurismo Revamped for the Future",
+            "content": "Maserati unveils a refreshed GranTurismo with upgraded technology and a bold new design language.",
+            "date": "2025-03-04",
+            "image_url": "/static/images/9.webp",
+            "category": "Industry News",
+            "author": "Giulia Rossi"
+        },
+        {
+            "id": 16,
+            "title": "Alfa Romeo’s Giulia Quadrifoglio Impresses at Expo",
+            "content": "At an international auto expo, the Giulia Quadrifoglio garners praise for its performance metrics and Italian styling.",
+            "date": "2025-03-03",
+            "image_url": "/static/images/10.webp",
+            "category": "Auto Shows",
+            "author": "Luca Bianchi"
+        },
+        {
+            "id": 17,
+            "title": "McLaren 720S: A New Era of Supercars",
+            "content": "McLaren introduces the 720S, heralding a new era in supercar performance with breakthrough technology and design.",
+            "date": "2025-03-02",
+            "image_url": "/static/images/1.webp",
+            "category": "Technology",
+            "author": "Sophia Green"
+        },
+        {
+            "id": 18,
+            "title": "Rare Ferrari F40 Sold at Record Price",
+            "content": "A pristine 1992 Ferrari F40 has been sold for a record-breaking $3.2 million at a private auction.",
+            "date": "2025-03-01",
+            "image_url": "/static/images/2.webp",
+            "category": "Sales",
+            "author": "Robert Maxwell",
+            "sale_details": {
+                "broker": "Luxury Auto Brokers Ltd.",
+                "sale_price": 3200000,
+                "previous_owners": 2,
+                "location": "Monaco",
+                "condition": "Pristine"
+            }
+        },
+        {
+            "id": 19,
+            "title": "Classic Mercedes 300SL Gullwing Changes Hands",
+            "content": "A historic 1955 Mercedes-Benz 300SL Gullwing finds new ownership through prestigious auction house.",
+            "date": "2025-02-28",
+            "image_url": "/static/images/3.webp",
+            "category": "Sales",
+            "author": "Heinrich Mueller",
+            "sale_details": {
+                "broker": "Heritage Automotive Sales",
+                "sale_price": 2800000,
+                "previous_owners": 3,
+                "location": "Stuttgart",
+                "auction_house": "RM Sotheby's"
+            }
+        },
+        {
+            "id": 20,
+            "title": "Bugatti Chiron Sets New Price Record",
+            "content": "Limited edition Bugatti Chiron Super Sport 300+ achieves unprecedented sale price through private broker.",
+            "date": "2025-02-27",
+            "image_url": "/static/images/4.webp",
+            "category": "Sales",
+            "author": "Jean-Pierre DuBois",
+            "sale_details": {
+                "broker": "Elite Automotive Consulting",
+                "sale_price": 5600000,
+                "location": "Dubai",
+                "special_features": ["One of 30", "Speed Record Edition"],
+                "buyer_region": "Middle East"
+            }
+        },
+        {
+            "id": 21,
+            "title": "Aston Martin DB5 from Movie Set Auctioned",
+            "content": "Famous movie-featured Aston Martin DB5 sells at celebrity auction for charity.",
+            "date": "2025-02-26",
+            "image_url": "/static/images/5.webp",
+            "category": "Sales",
+            "author": "Charles Winston",
+            "sale_details": {
+                "broker": "Celebrity Car Auctions",
+                "sale_price": 4100000,
+                "previous_owners": 1,
+                "location": "London",
+                "movie_history": true,
+                "charity_contribution": 1000000
+            }
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Car Search - Advanced Car Website{% endblock %}
+
+{% block content %}
+<div class="search-container">
+    <form class="search-form">
+        <input type="text" name="q" value="{{ query }}" placeholder="Search cars...">
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="car-grid">
+        {% for car in cars %}
+        <div class="car-card">
+            <div class="car-image">
+                <img src="{{ car.image_url }}" alt="{{ car.name }}">
+            </div>
+            <div class="car-content">
+                <h2>{{ car.name }} ({{ car.year }})</h2>
+                <div class="price">{{ car.price }}</div>
+                <p class="description">{{ car.description }}</p>
+                <div class="specifications-preview">
+                    <div class="spec-item">
+                        <strong>Engine:</strong> {{ car.specifications.engine }}
+                    </div>
+                    <div class="spec-item">
+                        <strong>Horsepower:</strong> {{ car.specifications.horsepower }}
+                    </div>
+                </div>
+                <a href="{{ url_for('car_details', car_id=car.id) }}" class="view-details">View Details</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
