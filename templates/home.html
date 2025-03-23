@@ -44,7 +44,7 @@
 </section>
 
 <!-- Latest News Section -->
-<section class="latest-news">
+<section class="latest-news mb-5">
     <h2 class="text-center mb-4">Latest Automotive News</h2>
     <div class="row">
         {% for article in latest_news %}
@@ -59,6 +59,29 @@
                     <h5 class="card-title">{{ article.title }}</h5>
                     <p class="card-text">{{ article.content[:100] }}...</p>
                     <a href="/news/{{ article.id }}" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Featured Brokers Section -->
+<section class="featured-brokers">
+    <h2 class="text-center mb-4">Meet Our Top Brokers</h2>
+    <div class="row">
+        {% for broker in featured_brokers %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ broker.image_url }}" class="card-img-top" alt="{{ broker.name }}" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ broker.name }}</h5>
+                    <div class="mb-2">
+                        <span class="badge bg-info">{{ broker.specialization }}</span>
+                    </div>
+                    <p class="mb-2">★ {{ broker.rating }} | {{ broker.experience }} years experience</p>
+                    <p class="card-text">{{ broker.location }} | Languages: {{ broker.languages|join(", ") }}</p>
+                    <a href="/brokers/{{ broker.id }}" class="btn btn-outline-primary">View Profile</a>
                 </div>
             </div>
         </div>

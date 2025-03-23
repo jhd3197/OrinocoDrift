@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Time Simulation{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="mb-4">Time Machine Simulation</h1>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Current Date</h5>
+                    <p class="card-text display-4">{{ current_date }}</p>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Next Day</h5>
+                    <p class="card-text display-4">{{ next_date }}</p>
+                    <a href="/?date={{ next_date }}" class="btn btn-primary btn-lg mt-3">Jump to Next Day</a>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Jump to Specific Date</h5>
+                            <form action="/" method="GET">
+                                <div class="mb-3">
+                                    <input type="date" class="form-control" name="date" value="{{ current_date }}">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Go</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Quick Jump to Month</h5>
+                            <div class="d-grid gap-2">
+                                <div class="row">
+                                    <div class="col-md-4 mb-2">
+                                        <a href="/?date={{ current_date[:4] }}-01-01" class="btn btn-outline-primary w-100">Jan</a>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <a href="/?date={{ current_date[:4] }}-02-01" class="btn btn-outline-primary w-100">Feb</a>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <a href="/?date={{ current_date[:4] }}-03-01" class="btn btn-outline-primary w-100">Mar</a>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <a href="/?date={{ current_date[:4] }}-04-01" class="btn btn-outline-primary w-100">Apr</a>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <a href="/?date={{ current_date[:4] }}-05-01" class="btn btn-outline-primary w-100">May</a>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <a href="/?date={{ current_date[:4] }}-06-01" class="btn btn-outline-primary w-100">Jun</a>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <a href="/?date={{ current_date[:4] }}-07-01" class="btn btn-outline-primary w-100">Jul</a>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <a href="/?date={{ current_date[:4] }}-08-01" class="btn btn-outline-primary w-100">Aug</a>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <a href="/?date={{ current_date[:4] }}-09-01" class="btn btn-outline-primary w-100">Sep</a>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <a href="/?date={{ current_date[:4] }}-10-01" class="btn btn-outline-primary w-100">Oct</a>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <a href="/?date={{ current_date[:4] }}-11-01" class="btn btn-outline-primary w-100">Nov</a>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <a href="/?date={{ current_date[:4] }}-12-01" class="btn btn-outline-primary w-100">Dec</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

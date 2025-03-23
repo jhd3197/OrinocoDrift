@@ -5,6 +5,7 @@
             "name": "Lamborghini Huracan",
             "year": 2023,
             "price": "$250,000",
+            "status": "available",
             "description": "A high-performance sports car with a powerful V10 engine and stunning design.",
             "image_url": "/static/images/0.webp",
             "specifications": {
@@ -21,13 +22,16 @@
                 "Advanced Infotainment System",
                 "Aerodynamic Design"
             ],
-            "colors": ["Arancio Borealis", "Giallo Inti", "Verde Mantis", "Blu Cepheus"]
+            "colors": ["Arancio Borealis", "Giallo Inti", "Verde Mantis", "Blu Cepheus"],
+            "related_news": [1, 17],
+            "broker_specialists": [3, 7]
         },
         {
             "id": 1,
             "name": "Tesla Model S",
-            "year": 2021,
+            "year": 2023,
             "price": "$80,000",
+            "status": "discontinued",
             "description": "Electric car with great performance and cutting-edge technology.",
             "image_url": "/static/images/1.webp",
             "specifications": {
@@ -44,13 +48,16 @@
                 "Wireless Charging",
                 "Premium Audio System"
             ],
-            "colors": ["Pearl White", "Solid Black", "Deep Blue", "Red"]
+            "colors": ["Pearl White", "Solid Black", "Deep Blue", "Red"],
+            "related_news": [3, 8],
+            "broker_specialists": [5, 9]
         },
         {
             "id": 2,
-            "name": "Ford Mustang",
-            "year": 2020,
-            "price": "$35,000",
+            "name": "Ford Mustang GT",
+            "year": 2023,
+            "price": "$45,000",
+            "status": "available",
             "description": "Classic American muscle car with a powerful engine.",
             "image_url": "/static/images/2.webp",
             "specifications": {
@@ -67,13 +74,16 @@
                 "Active Valve Performance Exhaust",
                 "SYNC 3"
             ],
-            "colors": ["Race Red", "Shadow Black", "Oxford White", "Velocity Blue"]
+            "colors": ["Race Red", "Shadow Black", "Oxford White", "Velocity Blue"],
+            "related_news": [2, 12],
+            "broker_specialists": [2, 4]
         },
         {
             "id": 3,
-            "name": "Chevrolet Camaro",
-            "year": 2022,
+            "name": "Chevrolet Camaro SS",
+            "year": 2023,
             "price": "$42,000",
+            "status": "available",
             "description": "Sporty design and excellent handling.",
             "image_url": "/static/images/3.webp",
             "specifications": {
@@ -90,13 +100,16 @@
                 "Performance Data Recorder",
                 "Dual-Mode Exhaust"
             ],
-            "colors": ["Summit White", "Black", "Red Hot", "Riverside Blue"]
+            "colors": ["Summit White", "Black", "Red Hot", "Riverside Blue"],
+            "related_news": [10, 14],
+            "broker_specialists": [4, 10]
         },
         {
             "id": 4,
-            "name": "BMW M3",
+            "name": "BMW M3 Competition",
             "year": 2023,
             "price": "$72,000",
+            "status": "limited_availability",
             "description": "High-performance luxury sedan with remarkable handling and power.",
             "image_url": "/static/images/4.webp",
             "specifications": {
@@ -113,13 +126,16 @@
                 "Adaptive M Suspension",
                 "BMW Live Cockpit Professional"
             ],
-            "colors": ["Isle of Man Green", "Alpine White", "Sapphire Black", "Toronto Red"]
+            "colors": ["Isle of Man Green", "Alpine White", "Sapphire Black", "Toronto Red"],
+            "related_news": [3, 19],
+            "broker_specialists": [10]
         },
         {
             "id": 5,
-            "name": "Porsche 911",
+            "name": "Porsche 911 Carrera",
             "year": 2023,
             "price": "$106,100",
+            "status": "available",
             "description": "Iconic sports car combining luxury with exceptional performance.",
             "image_url": "/static/images/5.webp",
             "specifications": {
@@ -136,13 +152,16 @@
                 "LED Matrix Headlights",
                 "Porsche Communication Management"
             ],
-            "colors": ["GT Silver", "Guards Red", "Jet Black", "Gentian Blue"]
+            "colors": ["GT Silver", "Guards Red", "Jet Black", "Gentian Blue"],
+            "related_news": [4, 15],
+            "broker_specialists": [3, 10]
         },
         {
             "id": 6,
-            "name": "Audi RS7",
+            "name": "Audi RS7 Sportback",
             "year": 2023,
             "price": "$120,900",
+            "status": "available",
             "description": "Premium performance fastback with stunning design and technology.",
             "image_url": "/static/images/6.webp",
             "specifications": {
@@ -159,236 +178,352 @@
                 "Bang & Olufsen 3D Sound",
                 "Virtual Cockpit Plus"
             ],
-            "colors": ["Nardo Gray", "Glacier White", "Mythos Black", "Tango Red"]
-        },{
-            "id": 9,
-            "name": "Nissan GT-R",
+            "colors": ["Nardo Gray", "Glacier White", "Mythos Black", "Tango Red"],
+            "related_news": [5, 16],
+            "broker_specialists": [10]
+        },
+        {
+            "id": 7,
+            "name": "Lamborghini Huracan Spyder",
             "year": 2023,
-            "price": "$115,000",
-            "description": "A high-performance sports car that delivers thrilling track performance.",
+            "price": "$280,000",
+            "status": "limited_availability",
+            "description": "The convertible version of the iconic Huracan, offering open-air exhilaration with supercar performance.",
+            "image_url": "/static/images/0.webp",
+            "specifications": {
+                "engine": "5.2L V10",
+                "horsepower": "630 hp",
+                "acceleration": "0-60 mph in 3.1s",
+                "transmission": "7-speed automatic",
+                "top_speed": "201 mph"
+            },
+            "features": [
+                "Retractable Soft Top",
+                "All-Wheel Drive",
+                "Adaptive Suspension",
+                "Carbon Ceramic Brakes",
+                "Advanced Aerodynamics"
+            ],
+            "colors": ["Arancio Borealis", "Giallo Inti", "Verde Mantis", "Blu Cepheus"],
+            "related_news": [17],
+            "broker_specialists": [3, 7],
+            "related_models": [0]
+        },
+        {
+            "id": 8,
+            "name": "Tesla Model S Plaid",
+            "year": 2023,
+            "price": "$130,000",
+            "status": "limited_availability",
+            "description": "The highest performance version of the Model S, offering supercar acceleration with electric efficiency.",
+            "image_url": "/static/images/1.webp",
+            "specifications": {
+                "engine": "Tri Motor All-Electric",
+                "horsepower": "1,020 hp",
+                "acceleration": "0-60 mph in 1.99s",
+                "range": "390 miles",
+                "top_speed": "200 mph"
+            },
+            "features": [
+                "Autopilot",
+                "Full Self-Driving Capability",
+                "17' Cinematic Display",
+                "New Interior Design",
+                "Yoke Steering"
+            ],
+            "colors": ["Pearl White", "Solid Black", "Deep Blue", "Red"],
+            "related_news": [8],
+            "broker_specialists": [5, 9],
+            "related_models": [1]
+        },
+        {
+            "id": 9,
+            "name": "Nissan GT-R Nismo",
+            "year": 2023,
+            "price": "$215,000",
+            "status": "limited_availability",
+            "description": "The ultimate expression of Nissan's GT-R platform, tuned by NISMO for maximum track performance.",
             "image_url": "/static/images/7.webp",
             "specifications": {
                 "engine": "3.8L Twin-Turbo V6",
-                "horsepower": "565 hp",
-                "acceleration": "0-60 mph in 2.9s",
+                "horsepower": "600 hp",
+                "acceleration": "0-60 mph in 2.5s",
                 "transmission": "6-speed dual-clutch",
-                "top_speed": "196 mph"
+                "top_speed": "205 mph"
             },
             "features": [
-                "Advanced AWD",
-                "Carbon Fiber Components",
-                "Launch Control",
-                "Sport-Tuned Suspension",
-                "Performance Brakes"
+                "NISMO-tuned Suspension",
+                "Carbon Ceramic Brakes",
+                "Carbon Fiber Body Components",
+                "Recaro Racing Seats",
+                "Limited Production Numbers"
             ],
-            "colors": ["Racing Red", "Pearl White", "Matte Black", "Silver"]
+            "colors": ["NISMO Black", "NISMO Red", "Stealth Gray", "Pearl White"],
+            "related_news": [8, 20],
+            "broker_specialists": [6, 9]
         },
         {
             "id": 10,
-            "name": "Jaguar F-Type",
-            "year": 2022,
-            "price": "$85,000",
-            "description": "A sleek and stylish sports car that blends performance with luxury.",
-            "image_url": "/static/images/8.webp",
+            "name": "Ford Mustang Mach-E",
+            "year": 2024,
+            "price": "$45,995",
+            "status": "available",
+            "description": "Ford's all-electric SUV that combines Mustang-inspired design with zero emissions performance.",
+            "image_url": "/static/images/2.webp",
             "specifications": {
-                "engine": "5.0L Supercharged V8",
-                "horsepower": "575 hp",
-                "acceleration": "0-60 mph in 3.5s",
-                "transmission": "8-speed automatic",
-                "top_speed": "186 mph"
-            },
-            "features": [
-                "Luxury Interior",
-                "Adaptive Dynamics",
-                "High-Performance Brakes",
-                "Infotainment System",
-                "Aerodynamic Design"
-            ],
-            "colors": ["British Racing Green", "Classic Black", "Lagoon Blue", "Silver"]
-        },
-        {
-            "id": 11,
-            "name": "Dodge Challenger SRT Hellcat",
-            "year": 2021,
-            "price": "$70,000",
-            "description": "An iconic American muscle car boasting immense power and aggressive styling.",
-            "image_url": "/static/images/9.webp",
-            "specifications": {
-                "engine": "6.2L Supercharged V8",
-                "horsepower": "717 hp",
-                "acceleration": "0-60 mph in 3.6s",
-                "transmission": "8-speed automatic",
-                "top_speed": "199 mph"
-            },
-            "features": [
-                "Performance Exhaust",
-                "Launch Control",
-                "Hood Air Extractor",
-                "Brembo Brakes",
-                "Sport Mode"
-            ],
-            "colors": ["Bowl of Fire", "Plum Crazy", "High Impact Red", "Sonic Yellow"]
-        },
-        {
-            "id": 12,
-            "name": "Subaru WRX STI",
-            "year": 2023,
-            "price": "$40,000",
-            "description": "A rally-inspired sports sedan known for its all-wheel-drive performance and dynamic handling.",
-            "image_url": "/static/images/10.webp",
-            "specifications": {
-                "engine": "2.5L Turbocharged Flat-4",
-                "horsepower": "310 hp",
-                "acceleration": "0-60 mph in 4.9s",
-                "transmission": "6-speed manual",
-                "top_speed": "155 mph"
-            },
-            "features": [
-                "Symmetrical AWD",
-                "Sports Tuning",
-                "High-Performance Brakes",
-                "Recaro Seats",
-                "Performance Exhaust"
-            ],
-            "colors": ["Crystal White", "Racing Blue", "Sunset Orange", "Jet Black"]
-        },
-        {
-            "id": 13,
-            "name": "Volvo XC90",
-            "year": 2023,
-            "price": "$55,000",
-            "description": "A luxury SUV that combines Scandinavian design with advanced safety and technology.",
-            "image_url": "/static/images/11.webp",
-            "specifications": {
-                "engine": "2.0L Turbocharged Inline-4",
-                "horsepower": "316 hp",
-                "acceleration": "0-60 mph in 6.5s",
-                "transmission": "8-speed automatic",
+                "engine": "Electric",
+                "horsepower": "346 hp",
+                "acceleration": "0-60 mph in 4.8s",
+                "range": "300 miles",
                 "top_speed": "130 mph"
             },
             "features": [
-                "Pilot Assist",
-                "Panoramic Sunroof",
-                "Luxury Interior",
-                "City Safety",
-                "Sensus Connect"
+                "All-Wheel Drive Available",
+                "15.5-inch Touchscreen",
+                "Ford Co-Pilot360",
+                "Over-the-air Updates",
+                "Phone as a Key"
             ],
-            "colors": ["Crystal White", "Ice Blue", "Midnight Black", "Onyx Gray"]
+            "colors": ["Carbonized Gray", "Rapid Red", "Star White", "Shadow Black"],
+            "related_news": [2, 12],
+            "broker_specialists": [5]
+        },
+        {
+            "id": 11,
+            "name": "Chevrolet Corvette Z06",
+            "year": 2024,
+            "price": "$105,000",
+            "status": "limited_availability",
+            "description": "Track-focused version of the mid-engine Corvette with a flat-plane crank V8 and racing-derived technology.",
+            "image_url": "/static/images/3.webp",
+            "specifications": {
+                "engine": "5.5L Flat-Plane Crank V8",
+                "horsepower": "670 hp",
+                "acceleration": "0-60 mph in 2.6s",
+                "transmission": "8-speed dual-clutch",
+                "top_speed": "195 mph"
+            },
+            "features": [
+                "Carbon Fiber Wheels",
+                "Magnetic Ride Control 4.0",
+                "Brembo Carbon Ceramic Brakes",
+                "Z07 Performance Package Available",
+                "Aggressive Aerodynamics"
+            ],
+            "colors": ["Torch Red", "Arctic White", "Accelerate Yellow", "Hypersonic Gray"],
+            "related_news": [21, 25],
+            "broker_specialists": [1, 4]
+        },
+        {
+            "id": 12,
+            "name": "BMW M5 CS",
+            "year": 2024,
+            "price": "$142,000",
+            "status": "limited_edition",
+            "description": "The most powerful BMW M car ever produced, offering supercar performance in a luxury sedan package.",
+            "image_url": "/static/images/4.webp",
+            "specifications": {
+                "engine": "4.4L Twin-Turbo V8",
+                "horsepower": "627 hp",
+                "acceleration": "0-60 mph in 2.9s",
+                "transmission": "8-speed automatic",
+                "top_speed": "190 mph"
+            },
+            "features": [
+                "Carbon Fiber Components",
+                "Gold Bronze Accents",
+                "M Carbon Ceramic Brakes",
+                "Four-Seat Configuration",
+                "Limited Production Run"
+            ],
+            "colors": ["Frozen Deep Green", "Brands Hatch Grey", "Frozen Oxide", "Gold Bronze Accents"],
+            "related_news": [22, 26],
+            "broker_specialists": [10],
+            "production_limit": 1000
+        },
+        {
+            "id": 13,
+            "name": "Porsche 911 GT3 RS",
+            "year": 2024,
+            "price": "$223,800",
+            "status": "limited_edition",
+            "description": "The most track-focused version of the 911, featuring advanced aerodynamics and weight reduction.",
+            "image_url": "/static/images/5.webp",
+            "specifications": {
+                "engine": "4.0L Naturally Aspirated Flat-6",
+                "horsepower": "518 hp",
+                "acceleration": "0-60 mph in 3.0s",
+                "transmission": "7-speed PDK",
+                "top_speed": "184 mph"
+            },
+            "features": [
+                "DRS-style Rear Wing",
+                "Carbon Fiber Components",
+                "Track-focused Suspension",
+                "Magnesium Wheels",
+                "Weissach Package Available"
+            ],
+            "colors": ["GT Silver", "Guards Red", "Shark Blue", "Python Green"],
+            "related_news": [23, 27],
+            "broker_specialists": [3, 10],
+            "production_limit": 1500
         },
         {
             "id": 14,
-            "name": "Honda Civic Type R",
-            "year": 2022,
-            "price": "$37,000",
-            "description": "A hot hatch offering exceptional performance and handling with a sporty design.",
-            "image_url": "/static/images/2.webp",
+            "name": "Audi RS e-tron GT",
+            "year": 2024,
+            "price": "$139,900",
+            "status": "available",
+            "description": "Audi's high-performance electric grand tourer, combining luxury with cutting-edge EV technology.",
+            "image_url": "/static/images/6.webp",
             "specifications": {
-                "engine": "2.0L Turbocharged Inline-4",
-                "horsepower": "306 hp",
-                "acceleration": "0-60 mph in 5.4s",
-                "transmission": "6-speed manual",
-                "top_speed": "169 mph"
-            },
-            "features": [
-                "Race-Inspired Design",
-                "Adaptive Suspension",
-                "Sport Seats",
-                "High-Performance Brakes",
-                "Limited Slip Differential"
-            ],
-            "colors": ["Rallye Red", "Polished Silver", "Ultra White", "Nighthawk Black"]
-        },
-        {
-            "id": 15,
-            "name": "Toyota Supra",
-            "year": 2023,
-            "price": "$50,000",
-            "description": "A legendary sports car reimagined with modern performance and style.",
-            "image_url": "/static/images/3.webp",
-            "specifications": {
-                "engine": "3.0L Turbocharged Inline-6",
-                "horsepower": "382 hp",
-                "acceleration": "0-60 mph in 4.1s",
-                "transmission": "8-speed automatic",
+                "engine": "Dual Motor Electric",
+                "horsepower": "637 hp",
+                "acceleration": "0-60 mph in 3.1s",
+                "range": "232 miles",
                 "top_speed": "155 mph"
             },
             "features": [
-                "Sport-Tuned Suspension",
-                "Advanced Aerodynamics",
-                "High-Performance Brakes",
-                "Digital Cockpit",
-                "Performance Exhaust"
+                "800-volt Architecture",
+                "270kW Fast Charging",
+                "Adaptive Air Suspension",
+                "Carbon Fiber Roof",
+                "Matrix LED Headlights"
             ],
-            "colors": ["Supra Red", "Jet Black", "Pearl White", "Stealth Gray"]
+            "colors": ["Daytona Gray", "Tactical Green", "Kemora Gray", "Mythos Black"],
+            "related_news": [24, 28],
+            "broker_specialists": [5, 10]
+        },
+        {
+            "id": 15,
+            "name": "Lamborghini Revuelto",
+            "year": 2025,
+            "price": "$500,000",
+            "status": "waitlist",
+            "description": "Lamborghini's first hybrid supercar, combining a V12 engine with electric motors for unprecedented performance.",
+            "image_url": "/static/images/0.webp",
+            "specifications": {
+                "engine": "6.5L V12 Hybrid",
+                "horsepower": "1001 hp",
+                "acceleration": "0-60 mph in 2.5s",
+                "transmission": "8-speed dual-clutch",
+                "top_speed": "217 mph"
+            },
+            "features": [
+                "Carbon Fiber Monocoque",
+                "Three Electric Motors",
+                "Active Aerodynamics",
+                "All-Wheel Drive",
+                "All-Wheel Steering"
+            ],
+            "colors": ["Bianco Monocerus", "Nero Noctis", "Verde Selvans", "Arancio Apodis"],
+            "related_news": [29, 33],
+            "broker_specialists": [3, 7],
+            "waitlist_position": 250
         },
         {
             "id": 16,
-            "name": "Maserati GranTurismo",
-            "year": 2021,
-            "price": "$135,000",
-            "description": "An elegant grand tourer offering Italian craftsmanship and a thrilling driving experience.",
-            "image_url": "/static/images/4.webp",
+            "name": "Tesla Cybertruck",
+            "year": 2025,
+            "price": "$79,990",
+            "status": "limited_availability",
+            "description": "Tesla's revolutionary electric pickup truck with a distinctive angular design and bulletproof exterior.",
+            "image_url": "/static/images/1.webp",
             "specifications": {
-                "engine": "4.7L V8",
-                "horsepower": "454 hp",
-                "acceleration": "0-60 mph in 4.7s",
-                "transmission": "7-speed automatic",
-                "top_speed": "180 mph"
+                "engine": "Tri Motor Electric",
+                "horsepower": "845 hp",
+                "acceleration": "0-60 mph in 2.9s",
+                "range": "340 miles",
+                "top_speed": "130 mph"
             },
             "features": [
-                "Luxurious Interior",
-                "Distinctive Exhaust Note",
-                "Precision Handling",
-                "Advanced Infotainment",
-                "Dynamic Stability Control"
+                "Stainless Steel Exoskeleton",
+                "Armor Glass",
+                "Adaptive Air Suspension",
+                "Vault-like Storage",
+                "Built-in Ramp"
             ],
-            "colors": ["Bianco Italia", "Grigio Alfieri", "Nero Touring", "Rosso Almas"]
+            "colors": ["Stainless Steel"],
+            "related_news": [30, 34],
+            "broker_specialists": [5, 9]
         },
         {
             "id": 17,
-            "name": "Alfa Romeo Giulia Quadrifoglio",
-            "year": 2023,
-            "price": "$75,000",
-            "description": "A high-performance sedan with Italian styling and a potent twin-turbo engine.",
-            "image_url": "/static/images/5.webp",
+            "name": "Ford Mustang Shelby GT500",
+            "year": 2025,
+            "price": "$76,800",
+            "status": "available",
+            "description": "The most powerful production Mustang ever, featuring a supercharged V8 and track-ready components.",
+            "image_url": "/static/images/2.webp",
             "specifications": {
-                "engine": "2.9L Twin-Turbo V6",
-                "horsepower": "505 hp",
-                "acceleration": "0-60 mph in 3.8s",
-                "transmission": "8-speed automatic",
-                "top_speed": "191 mph"
+                "engine": "5.2L Supercharged V8",
+                "horsepower": "760 hp",
+                "acceleration": "0-60 mph in 3.3s",
+                "transmission": "7-speed dual-clutch",
+                "top_speed": "180 mph"
             },
             "features": [
-                "Precision Engineering",
-                "Sport Exhaust",
-                "Dynamic Steering",
-                "Advanced Suspension",
-                "Luxurious Interior"
+                "MagneRide Suspension",
+                "Recaro Racing Seats",
+                "Carbon Fiber Track Package",
+                "Brembo Brakes",
+                "Active Exhaust"
             ],
-            "colors": ["Sprint Blue", "Verde Alfa", "Bianco St. Moritz", "Nero Competizione"]
+            "colors": ["Shadow Black", "Oxford White", "Velocity Blue", "Rapid Red"],
+            "related_news": [31, 35],
+            "broker_specialists": [2, 4]
         },
         {
             "id": 18,
-            "name": "McLaren 720S",
-            "year": 2023,
-            "price": "$299,000",
-            "description": "A cutting-edge supercar engineered for exceptional performance and aerodynamics.",
-            "image_url": "/static/images/6.webp",
+            "name": "Chevrolet Corvette E-Ray",
+            "year": 2025,
+            "price": "$104,295",
+            "status": "available",
+            "description": "The first hybrid Corvette, combining a V8 engine with an electric motor for enhanced performance and all-weather capability.",
+            "image_url": "/static/images/3.webp",
             "specifications": {
-                "engine": "4.0L Twin-Turbo V8",
-                "horsepower": "710 hp",
-                "acceleration": "0-60 mph in 2.8s",
-                "transmission": "7-speed dual-clutch",
-                "top_speed": "212 mph"
+                "engine": "6.2L V8 Hybrid",
+                "horsepower": "655 hp",
+                "acceleration": "0-60 mph in 2.5s",
+                "transmission": "8-speed dual-clutch",
+                "top_speed": "180 mph"
             },
             "features": [
-                "Carbon Fiber Body",
-                "Active Aerodynamics",
-                "Race-Tuned Suspension",
-                "Track Mode",
-                "Advanced Infotainment"
+                "All-Wheel Drive",
+                "Stealth Mode (Electric-Only)",
+                "Carbon Fiber Components",
+                "Magnetic Ride Control",
+                "Performance Data Recorder"
             ],
-            "colors": ["Volcano Orange", "Midnight Blue", "Arctic White", "Jet Black"]
+            "colors": ["Riptide Blue", "Cacti Green", "Red Mist", "Ceramic Matrix Gray"],
+            "related_news": [32, 36],
+            "broker_specialists": [1, 4]
+        },
+        {
+            "id": 19,
+            "name": "BMW XM",
+            "year": 2025,
+            "price": "$159,000",
+            "status": "available",
+            "description": "BMW M's first standalone model since the M1, featuring a high-performance hybrid powertrain in a luxury SUV package.",
+            "image_url": "/static/images/4.webp",
+            "specifications": {
+                "engine": "4.4L Twin-Turbo V8 Hybrid",
+                "horsepower": "644 hp",
+                "acceleration": "0-60 mph in 4.1s",
+                "electric_range": "30 miles",
+                "top_speed": "155 mph"
+            },
+            "features": [
+                "M xDrive All-Wheel Drive",
+                "Active Roll Stabilization",
+                "Four-Zone Climate Control",
+                "Bowers & Wilkins Sound System",
+                "Illuminated Kidney Grille"
+            ],
+            "colors": ["Cape York Green", "Toronto Red", "Carbon Black", "Marina Bay Blue"],
+            "related_news": [37, 40],
+            "broker_specialists": [10]
         }
     ]
 }

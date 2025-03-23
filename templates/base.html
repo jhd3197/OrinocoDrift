@@ -4,30 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/broker_details.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news_details.css') }}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/">OrinocoDrift</a>
+            <a class="navbar-brand" href="{% if current_date %}/?date={{ current_date }}{% else %}/{% endif %}">OrinocoDrift</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="{% if current_date %}/?date={{ current_date }}{% else %}/{% endif %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/cars">Vehicles</a>
+                        <a class="nav-link" href="{% if current_date %}/cars?date={{ current_date }}{% else %}/cars{% endif %}">Vehicles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/news">Blog</a>
+                        <a class="nav-link" href="{% if current_date %}/news?date={{ current_date }}{% else %}/news{% endif %}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% if current_date %}/brokers?date={{ current_date }}{% else %}/brokers{% endif %}">Brokers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% if current_date %}/simulate-day?current_date={{ current_date }}{% else %}/simulate-day{% endif %}">Time Machine</a>
                     </li>
                 </ul>
                 <form class="d-flex" action="/cars" method="GET">
                     <input class="form-control me-2" type="search" placeholder="Search cars..." name="q">
+                    {% if current_date %}
+                    <input type="hidden" name="date" value="{{ current_date }}">
+                    {% endif %}
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
             </div>
@@ -38,7 +53,7 @@
         {% block content %}{% endblock %}
     </main>
 
-    <footer class="bg-dark text-light py-4 mt-5">
+    <footer class="bg-dark text-light py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -60,6 +75,183 @@
         </div>
     </footer>
 
+    <div id="timeline" class="timeline-container">
+        <div class="timeline-controls">
+            <button id="play-pause" class="btn btn-primary">
+                <i class="fas fa-play"></i>
+            </button>
+            <input type="range" id="time-slider" min="1" max="12" step="1" value="1">
+            <span id="current-time">January</span>
+            <a href="/simulate-day{% if current_date %}?current_date={{ current_date }}{% endif %}" class="btn btn-info ms-3">
+                <i class="fas fa-calendar-alt"></i> Time Machine
+            </a>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        .timeline-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(33, 37, 41, 0.95);
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        .timeline-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #time-slider {
+            width: 60%;
+            height: 10px;
+            -webkit-appearance: none;
+            background: #495057;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        #time-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #0d6efd;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #current-time {
+            color: white;
+            font-size: 1.2em;
+            min-width: 60px;
+        }
+
+        main.container {
+            margin-bottom: 100px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('time-slider');
+            const timeDisplay = document.getElementById('current-time');
+            const playPauseBtn = document.getElementById('play-pause');
+            let isPlaying = false;
+            let animationId;
+
+            // Get the current year
+            const currentYear = new Date().getFullYear();
+            
+            // Month names for display
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            
+            // Initialize slider based on URL parameter if present
+            const urlParams = new URLSearchParams(window.location.search);
+            const dateParam = urlParams.get('date');
+            
+            if (dateParam) {
+                // Parse the date to set the slider
+                try {
+                    const dateParts = dateParam.split('-');
+                    if (dateParts.length >= 2) {
+                        const month = parseInt(dateParts[1]);
+                        slider.value = month;
+                        timeDisplay.textContent = monthNames[month - 1];
+                    }
+                } catch (e) {
+                    console.error("Error parsing date parameter:", e);
+                }
+            }
+
+            slider.addEventListener('input', function() {
+                // Get the month from the slider (1-12)
+                const month = parseInt(this.value);
+                
+                // Update the display with the month name
+                timeDisplay.textContent = monthNames[month - 1];
+                
+                // Create a date string with the current year and selected month
+                const dateStr = `${currentYear}-${month.toString().padStart(2, '0')}-01`;
+                updateContent(dateStr);
+            });
+
+            playPauseBtn.addEventListener('click', function() {
+                isPlaying = !isPlaying;
+                this.innerHTML = isPlaying ? '<i class="fas fa-pause"></i>' : '<i class="fas fa-play"></i>';
+                
+                if (isPlaying) {
+                    playTimeline();
+                } else {
+                    stopTimeline();
+                }
+            });
+
+            function playTimeline() {
+                if (parseInt(slider.value) >= parseInt(slider.max)) {
+                    slider.value = slider.min;
+                }
+                
+                function animate() {
+                    if (parseInt(slider.value) < parseInt(slider.max)) {
+                        // Move to the next month
+                        slider.value = parseInt(slider.value) + 1;
+                        
+                        // Get the month from the slider (1-12)
+                        const month = parseInt(slider.value);
+                        
+                        // Update the display with the month name
+                        timeDisplay.textContent = monthNames[month - 1];
+                        
+                        // Create a date string with the current year and selected month
+                        const dateStr = `${currentYear}-${month.toString().padStart(2, '0')}-01`;
+                        updateContent(dateStr);
+                        
+                        // Slow down the animation to make it more visible
+                        setTimeout(() => {
+                            animationId = requestAnimationFrame(animate);
+                        }, 1000); // 1 second delay between months
+                    } else {
+                        stopTimeline();
+                    }
+                }
+                
+                animationId = requestAnimationFrame(animate);
+            }
+
+            function stopTimeline() {
+                cancelAnimationFrame(animationId);
+                isPlaying = false;
+                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+            }
+
+            function updateContent(dateStr) {
+                // Send the current date to the server
+                const params = new URLSearchParams(window.location.search);
+                params.set('date', dateStr);
+                
+                fetch(window.location.pathname + '?' + params.toString())
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const newDoc = parser.parseFromString(html, 'text/html');
+                        const newContent = newDoc.querySelector('main.container');
+                        const currentContent = document.querySelector('main.container');
+                        
+                        if (newContent && currentContent) {
+                            currentContent.innerHTML = newContent.innerHTML;
+                        }
+                    });
+            }
+        });
+    </script>
 </body>
 </html>

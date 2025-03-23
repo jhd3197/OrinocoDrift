@@ -1,0 +1,124 @@
+.news-detail-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #1e3c72;
+    text-decoration: none;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.article-header h1 {
+    font-size: 2.5rem;
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+.article-meta {
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category-tag {
+    background: #1e3c72;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.article-image {
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.article-content {
+    line-height: 1.8;
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.article-footer {
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.share-buttons button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background: #1e3c72;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.share-buttons button:hover {
+    background: #2a5298;
+}
+
+.back-to-news {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.back-to-news a {
+    color: #1e3c72;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.back-to-news a:hover {
+    color: #2a5298;
+}
+
+@media (max-width: 768px) {
+    .article-header h1 {
+        font-size: 2rem;
+    }
+    
+    .share-buttons {
+        flex-direction: column;
+    }
+    
+    .share-buttons button {
+        width: 100%;
+    }
+}

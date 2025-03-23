@@ -1,24 +1,22 @@
 {
     "articles": [
+
         {
             "id": 1,
             "title": "New Tesla Model S Release",
-            "content": "Tesla has unveiled its latest Model S with improved battery performance and range.",
-            "date": "2025-03-18",
+            "content": "Tesla has unveiled its latest Model S, showcasing significant improvements in battery performance and range. With an impressive range exceeding 400 miles on a single charge, Tesla sets a new industry benchmark. The updated Model S also features advanced autonomous driving capabilities and a redesigned interior, emphasizing minimalism and luxury. Enhanced infotainment options and improved acceleration further distinguish this model. Environmental advocates praise the release as a major step toward sustainable transportation. Tesla's continuous innovation keeps the Model S competitive against emerging electric vehicle contenders and ensures its position as a market leader in electric mobility.",
             "image_url": "/static/images/7.webp"
         },
         {
             "id": 2,
             "title": "Ford Updates Mustang Lineup",
-            "content": "Ford is revamping its Mustang lineup with new tech features and safety improvements.",
-            "date": "2025-03-17",
+            "content": "Ford is revamping its iconic Mustang lineup by introducing advanced technology features and crucial safety improvements. These enhancements include Ford's latest SYNC infotainment system, offering seamless smartphone integration and intuitive voice control. Safety-wise, the Mustang now comes equipped with driver-assistance technologies such as lane-keep assist and automatic emergency braking, significantly boosting driver confidence. Performance enthusiasts will appreciate the upgraded suspension and refined powertrains, delivering enhanced responsiveness and control. Ford aims to balance tradition and innovation, ensuring the Mustang remains appealing to both classic muscle car aficionados and new generations of tech-savvy drivers eager for high-performance driving experiences.",
             "image_url": "/static/images/8.webp"
         },
         {
             "id": 3,
             "title": "BMW M3 Sets New Track Record",
-            "content": "The new BMW M3 Competition has set a remarkable lap time at the Nürburgring, showcasing its exceptional performance capabilities.",
-            "date": "2025-03-16",
+            "content": "The new BMW M3 Competition has stunned the automotive world by setting an impressive lap time at the Nürburgring, further solidifying BMW's reputation for performance excellence. Powered by a robust inline-six engine delivering over 500 horsepower, the vehicle navigated the challenging track with precision, agility, and speed. Engineers have attributed this achievement to extensive aerodynamics improvements and meticulous suspension tuning. Industry analysts hail the M3 Competition as a masterpiece of engineering, balancing raw power with sophisticated handling. BMW fans eagerly anticipate the model's market debut, eager to experience firsthand its unparalleled track-ready dynamics and cutting-edge technology features.",
             "image_url": "/static/images/9.webp",
             "category": "Performance",
             "author": "Michael Wagner"
@@ -26,8 +24,7 @@
         {
             "id": 4,
             "title": "Porsche Announces Electric 911",
-            "content": "In a groundbreaking announcement, Porsche reveals plans for an all-electric version of the iconic 911, scheduled for 2026.",
-            "date": "2025-03-15",
+            "content": "In a groundbreaking announcement, Porsche reveals ambitious plans to launch an all-electric version of its iconic 911 by 2026. The electric 911 promises to deliver performance matching or exceeding current combustion-engine variants, powered by Porsche's state-of-the-art battery technology. Company executives emphasize that the electric 911 will retain the brand's legendary driving dynamics and sports car heritage while significantly reducing environmental impact. Porsche aims to attract both traditionalists and new-generation customers interested in sustainability without compromising on luxury and performance. Enthusiasts eagerly await further details, anticipating how Porsche will revolutionize electric sports cars with this landmark initiative.",
             "image_url": "/static/images/10.webp",
             "category": "Future Tech",
             "author": "Sarah Chen"
@@ -35,107 +32,95 @@
         {
             "id": 5,
             "title": "Audi RS Models Go Hybrid",
-            "content": "Audi Sport announces that all future RS models will feature hybrid powertrains, starting with the next-generation RS7.",
-            "date": "2025-03-14",
+            "content": "Audi Sport announces that all future RS models will incorporate hybrid powertrains, signaling a major strategic shift toward sustainability. The next-generation RS7 will debut as Audi's first high-performance hybrid, combining traditional combustion power with electric motor technology. This hybrid integration aims to enhance both efficiency and power, significantly reducing emissions without sacrificing driving enjoyment. Audi executives underscore the brand’s commitment to environmental responsibility and innovation, positioning Audi as a leader in the evolving performance vehicle market. Fans and industry observers alike look forward to experiencing how Audi's hybrid RS models redefine high-performance luxury driving in a greener automotive future.",
             "image_url": "/static/images/1.webp",
             "category": "Industry News",
             "author": "James Miller"
         },
         {
-            "id": 8,
+            "id": 6,
             "title": "Nissan GT-R Unleashed in Tokyo",
-            "content": "Nissan unveils a limited edition GT-R at the Tokyo Auto Show, featuring exclusive design elements and performance upgrades.",
-            "date": "2025-03-11",
+            "content": "Nissan GT-R Unleashed in Tokyo Nissan has taken the Tokyo Auto Show by storm, unveiling an exclusive, limited-edition GT-R. This new variant boasts unique design elements, including a striking aerodynamic body kit, exclusive metallic paint options, and bespoke interior trims tailored specifically for enthusiasts. Under the hood, substantial performance upgrades have been made, resulting in enhanced horsepower and torque. Advanced suspension tuning and reinforced braking systems have also been integrated, allowing the GT-R to achieve superior handling and agility. Nissan representatives emphasized the vehicle’s exclusivity and heritage, stating that production will be strictly limited, making this GT-R a highly sought-after collector’s piece for automotive enthusiasts.",
             "image_url": "/static/images/2.webp",
             "category": "Auto Shows",
             "author": "Kenji Yamamoto"
         },
         {
-            "id": 9,
+            "id": 7,
             "title": "Jaguar F-Type Celebrates Anniversary",
-            "content": "Jaguar commemorates the 10th anniversary of the F-Type with special edition models and enhanced performance features.",
-            "date": "2025-03-10",
+            "content": "Jaguar F-Type Celebrates Anniversary Jaguar proudly commemorates the 10th anniversary of its beloved F-Type sports car with special-edition models featuring exclusive design touches and improved performance attributes. Marking a decade of dynamic driving, these anniversary editions receive distinct visual enhancements, including unique badging, premium leather upholstery, and specially curated color palettes. Performance-wise, Jaguar engineers have refined engine response, fine-tuned suspension systems, and upgraded braking technology, elevating both handling and driver engagement. Jaguar's Chief Designer highlighted how these limited-run vehicles represent a tribute to the iconic F-Type’s legacy, promising enthusiasts not only exclusivity but also a superior driving experience for collectors and passionate fans alike.",
             "image_url": "/static/images/3.webp",
             "category": "Special Editions",
             "author": "Emily Watson"
         },
         {
-            "id": 10,
+            "id": 8,
             "title": "Dodge Challenger Hellcat Breaks Records",
-            "content": "The Dodge Challenger SRT Hellcat sets a new benchmark for American muscle cars in speed and performance tests.",
-            "date": "2025-03-09",
+            "content": "Dodge Challenger Hellcat Breaks Records Setting a new performance benchmark, the Dodge Challenger SRT Hellcat has shattered previous records in American muscle car speed tests. Equipped with a supercharged V8 engine, it delivers extraordinary power output, propelling this muscular coupe to unprecedented acceleration figures. Engineers have enhanced aerodynamics and reduced weight through strategic use of advanced composite materials, further improving speed and agility. During official performance assessments, the Challenger Hellcat excelled in both quarter-mile and track-based testing scenarios, solidifying its position atop the muscle car hierarchy. Dodge executives proudly emphasized the Hellcat’s relentless pursuit of raw performance and its ability to deliver unmatched excitement to dedicated muscle car aficionados.",
             "image_url": "/static/images/4.webp",
             "category": "Performance",
             "author": "Mike Thompson"
         },
         {
-            "id": 11,
+            "id": 9,
             "title": "Subaru WRX STI Wins Rally Championship",
-            "content": "The Subaru WRX STI secures the championship title at the annual rally event, showcasing its rugged performance on challenging terrains.",
-            "date": "2025-03-08",
+            "content": "Subaru WRX STI Wins Rally Championship The Subaru WRX STI has triumphantly secured the championship title at this year's prestigious annual rally event, highlighting its superior ruggedness, reliability, and speed across challenging terrain. Driven by Subaru's expert rally team, the WRX STI demonstrated exceptional handling on gravel, mud, and icy surfaces, consistently outperforming formidable rivals. Key enhancements to its rally-spec suspension setup, robust chassis design, and meticulously tuned turbocharged powertrain played critical roles in achieving victory. Subaru celebrated this championship win, emphasizing their longstanding commitment to motorsport excellence and highlighting how competitive rally racing continues to drive technological innovation and performance improvements across their lineup.",
             "image_url": "/static/images/5.webp",
             "category": "Motorsports",
             "author": "Laura Davis"
         },
         {
-            "id": 12,
+            "id": 10,
             "title": "Volvo XC90 Receives Top Safety Award",
-            "content": "Volvo’s XC90 is honored with a top safety award for its innovative safety features and forward-thinking design.",
-            "date": "2025-03-07",
+            "content": "Volvo XC90 Receives Top Safety Award Recognized once again for its industry-leading safety standards, Volvo’s XC90 SUV has earned a prestigious top safety award, reinforcing the Swedish automaker’s longstanding reputation for innovation in vehicle safety. Equipped with groundbreaking safety technology, including advanced collision avoidance systems, autonomous emergency braking, pedestrian detection, and lane-keeping assist, the XC90 consistently received outstanding scores across stringent safety tests. The vehicle’s structural integrity, achieved through innovative design and high-strength materials, significantly enhances occupant protection. Volvo’s Chief Safety Officer proudly highlighted the XC90's continued evolution, underscoring the brand's unwavering commitment to pioneering life-saving technologies aimed at achieving zero fatalities and serious injuries in Volvo cars.",
             "image_url": "/static/images/6.webp",
             "category": "Awards",
             "author": "Sven Andersson"
         },
         {
-            "id": 13,
+            "id": 11,
             "title": "Honda Civic Type R Outperforms Rivals",
             "content": "Recent performance tests reveal that the Honda Civic Type R outclasses its competitors with superior handling and speed.",
-            "date": "2025-03-06",
             "image_url": "/static/images/7.webp",
             "category": "Performance",
             "author": "David Lee"
         },
         {
-            "id": 14,
+            "id": 12,
             "title": "Toyota Supra Returns to Racing",
             "content": "Toyota announces its return to competitive racing with the latest Supra model designed to dominate the track.",
-            "date": "2025-03-05",
             "image_url": "/static/images/8.webp",
             "category": "Racing",
             "author": "Akira Tanaka"
         },
         {
-            "id": 15,
+            "id": 13,
             "title": "Maserati GranTurismo Revamped for the Future",
             "content": "Maserati unveils a refreshed GranTurismo with upgraded technology and a bold new design language.",
-            "date": "2025-03-04",
             "image_url": "/static/images/9.webp",
             "category": "Industry News",
             "author": "Giulia Rossi"
         },
         {
-            "id": 16,
-            "title": "Alfa Romeo’s Giulia Quadrifoglio Impresses at Expo",
+            "id": 14,
+            "title": "Alfa Romeo's Giulia Quadrifoglio Impresses at Expo",
             "content": "At an international auto expo, the Giulia Quadrifoglio garners praise for its performance metrics and Italian styling.",
-            "date": "2025-03-03",
             "image_url": "/static/images/10.webp",
             "category": "Auto Shows",
             "author": "Luca Bianchi"
         },
         {
-            "id": 17,
+            "id": 15,
             "title": "McLaren 720S: A New Era of Supercars",
             "content": "McLaren introduces the 720S, heralding a new era in supercar performance with breakthrough technology and design.",
-            "date": "2025-03-02",
             "image_url": "/static/images/1.webp",
             "category": "Technology",
             "author": "Sophia Green"
         },
         {
-            "id": 18,
+            "id": 16,
             "title": "Rare Ferrari F40 Sold at Record Price",
             "content": "A pristine 1992 Ferrari F40 has been sold for a record-breaking $3.2 million at a private auction.",
-            "date": "2025-03-01",
             "image_url": "/static/images/2.webp",
             "category": "Sales",
             "author": "Robert Maxwell",
@@ -148,10 +133,9 @@
             }
         },
         {
-            "id": 19,
+            "id": 17,
             "title": "Classic Mercedes 300SL Gullwing Changes Hands",
             "content": "A historic 1955 Mercedes-Benz 300SL Gullwing finds new ownership through prestigious auction house.",
-            "date": "2025-02-28",
             "image_url": "/static/images/3.webp",
             "category": "Sales",
             "author": "Heinrich Mueller",
@@ -164,10 +148,9 @@
             }
         },
         {
-            "id": 20,
+            "id": 18,
             "title": "Bugatti Chiron Sets New Price Record",
             "content": "Limited edition Bugatti Chiron Super Sport 300+ achieves unprecedented sale price through private broker.",
-            "date": "2025-02-27",
             "image_url": "/static/images/4.webp",
             "category": "Sales",
             "author": "Jean-Pierre DuBois",
@@ -180,10 +163,9 @@
             }
         },
         {
-            "id": 21,
+            "id": 19,
             "title": "Aston Martin DB5 from Movie Set Auctioned",
             "content": "Famous movie-featured Aston Martin DB5 sells at celebrity auction for charity.",
-            "date": "2025-02-26",
             "image_url": "/static/images/5.webp",
             "category": "Sales",
             "author": "Charles Winston",

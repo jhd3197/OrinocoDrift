@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}{{ article.title }} - Advanced Car Website{% endblock %}
+{% block title %}{{ article.title }} - OrinocoDrift News{% endblock %}
 
 {% block content %}
 <div class="news-detail-container">
     <nav class="breadcrumb">
-        <a href="{{ url_for('news') }}">News</a> &gt; 
+        <a href="{{ url_for('news') }}"><i class="fas fa-newspaper"></i> News</a> &gt; 
         {% if article.category %}
-        <span>{{ article.category }}</span> &gt;
+        <span class="category"><i class="fas fa-folder"></i> {{ article.category }}</span> &gt;
         {% endif %}
-        <span>{{ article.title }}</span>
+        <span class="current">{{ article.title }}</span>
     </nav>
 
     <article class="news-detail">
@@ -17,11 +17,17 @@
             <h1>{{ article.title }}</h1>
             <div class="article-meta">
                 {% if article.category %}
-                <span class="category-tag">{{ article.category }}</span>
+                <span class="category-tag">
+                    <i class="fas fa-tag"></i> {{ article.category }}
+                </span>
                 {% endif %}
-                <time datetime="{{ article.date }}">{{ article.date }}</time>
+                <time datetime="{{ article.date }}">
+                    <i class="far fa-calendar-alt"></i> {{ article.date }}
+                </time>
                 {% if article.author %}
-                <span class="author">By {{ article.author }}</span>
+                <span class="author">
+                    <i class="far fa-user"></i> {{ article.author }}
+                </span>
                 {% endif %}
             </div>
         </header>
@@ -33,42 +39,28 @@
         {% endif %}
 
         <div class="article-content">
-            {{ article.content }}
+            {{ article.content|safe }}
         </div>
 
         <footer class="article-footer">
             <div class="share-buttons">
-                <button onclick="share('twitter')">Share on Twitter</button>
-                <button onclick="share('facebook')">Share on Facebook</button>
-                <button onclick="share('linkedin')">Share on LinkedIn</button>
+                <button onclick="share('twitter')">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </button>
+                <button onclick="share('facebook')">
+                    <i class="fab fa-facebook-f"></i> Share on Facebook
+                </button>
+                <button onclick="share('linkedin')">
+                    <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+                </button>
             </div>
         </footer>
     </article>
 
     <div class="back-to-news">
-        <a href="{{ url_for('news') }}">&larr; Back to News</a>
+        <a href="{{ url_for('news') }}">
+            <i class="fas fa-arrow-left"></i> Back to News
+        </a>
     </div>
 </div>
-
-<script>
-function share(platform) {
-    const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent("{{ article.title }}");
-    
-    let shareUrl;
-    switch(platform) {
-        case 'twitter':
-            shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
-            break;
-        case 'facebook':
-            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-            break;
-        case 'linkedin':
-            shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
-            break;
-    }
-    
-    window.open(shareUrl, '_blank', 'width=600,height=400');
-}
-</script>
 {% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Broker Search - Orinoco Drift{% endblock %}
+
+{% block content %}
+<div class="search-container">
+    <h1>Find Your Perfect Car Broker</h1>
+    
+    <form class="search-form">
+        <input type="text" name="q" value="{{ query }}" placeholder="Search brokers by name or specialization...">
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="row">
+        {% for broker in brokers %}
+        <div class="col-md-4 mb-4">
+            <div class="broker-card">
+                <div class="broker-image">
+                    <img src="{{ broker.image_url }}" alt="{{ broker.name }}" style="width: 100%; height: auto;">
+                </div>
+                <div class="broker-content">
+                    <h2>{{ broker.name }}</h2>
+                    <div class="broker-rating">★ {{ broker.rating }} | {{ broker.experience }} years experience</div>
+                    <p class="specialization">{{ broker.specialization }}</p>
+                    <div class="broker-preview">
+                        <div class="location-item">
+                            <strong>Location:</strong> {{ broker.location }}
+                        </div>
+                        <div class="languages-item">
+                            <strong>Languages:</strong> {{ broker.languages|join(", ") }}
+                        </div>
+                    </div>
+                    <a href="{{ url_for('broker_details', broker_id=broker.id) }}" class="view-details">View Profile</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
