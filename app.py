@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, abort, Response
 from flask_cors import CORS
 import datetime
 import json
+from security import SecurityMiddleware
 
 # Bot Detection Configuration
 BOT_DETECTION = {
@@ -35,6 +36,7 @@ RATE_LIMITS = {
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
+security = SecurityMiddleware(app, BOT_DETECTION, RATE_LIMITS)
 
 def get_current_date():
     """Return the current date in YYYY-MM-DD format"""
